@@ -7,6 +7,5 @@ RUN tar -xvf /guldenserver/Gulden-1.6.4-x86_64-linux.tar.gz -C /guldenserver
 RUN rm /guldenserver/Gulden-1.6.4-x86_64-linux.tar.gz
 RUN mkdir /guldenserver/datadir
 RUN echo "disablewallet=1 \nmaxconnections=20 \nrpcuser=xxx \nrpcpassword=yyy" > /guldenserver/datadir/Gulden.conf
+VOLUME /guldenserver/datadir
 CMD ["/guldenserver/GuldenD", "-datadir=/guldenserver/datadir"]
-#ENTRYPOINT /guldenserver/GuldenD -datadir=./guldenserver/datadir &
-#CMD ["/bin/bash"]
