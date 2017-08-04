@@ -10,3 +10,6 @@ docker build -t guldendocker .
 
 Optional: Want root access?
 docker run -i --privileged -t guldendocker:latest /bin/bash
+
+# Live terminal session
+Watch a live GuldenDocker image installation at https://asciinema.org/a/qRJknCQ3It8HTZxn1xspfBJX1
