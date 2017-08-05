@@ -5,6 +5,8 @@ Almost all full nodes also help the network by accepting transactions and blocks
 Most full nodes also serve lightweight clients by allowing them to transmit their transactions to the network and by notifying them when a transaction affects their wallet, If not enough nodes perform this function, our mobile wallets (iOS and Android) will perform poorly. It is therefore very important for the network that we continue to grow our network of full nodes to keep pace with our mobile growth.
 
 # GuldenDocker
+The image can also be found at https://hub.docker.com/r/jaymaree92/guldendocker/
+
 Step 1: Build the image:
 docker build -t guldendocker .
 
