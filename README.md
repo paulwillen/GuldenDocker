@@ -15,3 +15,6 @@ docker run -i --privileged -t guldendocker:latest /bin/bash
 
 # Live terminal session
 Watch a live GuldenDocker image installation at https://asciinema.org/a/qRJknCQ3It8HTZxn1xspfBJX1
+
+# Support
+Looking for support? Feel free to ask any question in our Slack channel which can be found at https://gulden.com/nl/support
