@@ -14,7 +14,7 @@ RUN mkdir /guldenserver \
 RUN wget https://github.com/Gulden/gulden-official/releases/download/v1.6.4.8/Gulden-1.6.4.8-x86_64-linux.tar.gz -P /guldenserver/ \
     && tar -xvf /guldenserver/Gulden-1.6.4.8-x86_64-linux.tar.gz -C /guldenserver \
     && rm /guldenserver/Gulden-1.6.4.8-x86_64-linux.tar.gz \
-    && echo -e "disablewallet=1 \nmaxconnections=20 \nrpcuser=xxx \nrpcpassword=yyy" > /guldenserver/datadir/Gulden.conf \
+    && echo -e "disablewallet=1 \nmaxconnections=$MAXCONNECTIONS \nrpcuser=$RPCUSER \nrpcpassword=$RPCPASSWORD" > /guldenserver/datadir/Gulden.conf \
     && echo "/guldenserver/Gulden-cli -datadir=/guldenserver/datadir getpeerinfo | curl -X POST -H "Content-Type:application/json" -d @- https://guldennodes.com/endpoint/" > /guldenserver/cronGuldennodes.sh \
     && (crontab -l ; echo "*/30 * * * * /guldenserver/cronGuldennodes.sh")| crontab -
 
