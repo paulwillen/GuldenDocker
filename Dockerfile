@@ -10,9 +10,9 @@ RUN mkdir /guldenserver
 RUN cd /guldenserver
 
 # Download the Gulden node software
-RUN wget https://github.com/Gulden/gulden-official/releases/download/v1.6.4.1/Gulden-1.6.4-x86_64-linux.tar.gz -P /guldenserver/
-RUN tar -xvf /guldenserver/Gulden-1.6.4-x86_64-linux.tar.gz -C /guldenserver
-RUN rm /guldenserver/Gulden-1.6.4-x86_64-linux.tar.gz
+RUN wget https://github.com/Gulden/gulden-official/releases/download/v1.6.4.8/Gulden-1.6.4.8-x86_64-linux.tar.gz -P /guldenserver/
+RUN tar -xvf /guldenserver/Gulden-1.6.4.8-x86_64-linux.tar.gz -C /guldenserver
+RUN rm /guldenserver/Gulden-1.6.4.8-x86_64-linux.tar.gz
 RUN mkdir /guldenserver/datadir
 RUN echo "disablewallet=1 \nmaxconnections=20 \nrpcuser=xxx \nrpcpassword=yyy" > /guldenserver/datadir/Gulden.conf
 RUN echo "/guldenserver/Gulden-cli -datadir=/guldenserver/datadir getpeerinfo | curl -X POST -H "Content-Type:application/json" -d @- https://guldennodes.com/endpoint/" > /guldenserver/cronGuldennodes.sh
