@@ -10,6 +10,9 @@ The image can also be found at https://hub.docker.com/r/jaymaree92/guldendocker/
 Step 1: Build the image:
 docker build -t guldendocker .
 
+Step 2: Run the container
+docker run -e "MAXCONNECTIONS=20" -e "RPCUSER=username" -e "RPCPASSWORD=password" -d guldendocker:latest
+
 Optional: Want root access?
 docker run -i --privileged -t guldendocker:latest /bin/bash
 
